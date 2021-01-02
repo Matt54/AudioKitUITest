@@ -34,7 +34,6 @@ class Conductor : ObservableObject{
         mic = input
         micMixer = Mixer(mic)
         silentMixer = Mixer(micMixer)
-        silentMixer.volume = 0.0
         
         // route the silent Mixer to the limiter (you must always route the audio chain to AudioKit.output)
         outputLimiter = PeakLimiter(silentMixer)
@@ -49,6 +48,10 @@ class Conductor : ObservableObject{
         catch{
             assert(false, error.localizedDescription)
         }
+        
+        // mixer volume can only be set when its attached to the engine
+        silentMixer.volume = 0.0
+        
     }
     
 }
