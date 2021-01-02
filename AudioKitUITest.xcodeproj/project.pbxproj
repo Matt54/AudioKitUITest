@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		4F1570A6259FF7620082A70D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1570A5259FF7620082A70D /* ContentView.swift */; };
 		4F1570A8259FF7630082A70D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1570A7259FF7630082A70D /* Assets.xcassets */; };
 		4F1570AB259FF7630082A70D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1570AA259FF7630082A70D /* Preview Assets.xcassets */; };
+		4F1570B5259FF79F0082A70D /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4F1570B4259FF79F0082A70D /* AudioKitUI */; };
+		4F1570B8259FF7B20082A70D /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1570B7259FF7B20082A70D /* Conductor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		4F1570A7259FF7630082A70D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F1570AA259FF7630082A70D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F1570AC259FF7630082A70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F1570B7259FF7B20082A70D /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1570B5259FF79F0082A70D /* AudioKitUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				4F1570A3259FF7620082A70D /* AudioKitUITestApp.swift */,
 				4F1570A5259FF7620082A70D /* ContentView.swift */,
+				4F1570B7259FF7B20082A70D /* Conductor.swift */,
 				4F1570A7259FF7630082A70D /* Assets.xcassets */,
 				4F1570AC259FF7630082A70D /* Info.plist */,
 				4F1570A9259FF7630082A70D /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = AudioKitUITest;
+			packageProductDependencies = (
+				4F1570B4259FF79F0082A70D /* AudioKitUI */,
+			);
 			productName = AudioKitUITest;
 			productReference = 4F1570A0259FF7620082A70D /* AudioKitUITest.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 4F157097259FF7620082A70D;
+			packageReferences = (
+				4F1570B3259FF79F0082A70D /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+			);
 			productRefGroup = 4F1570A1259FF7620082A70D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1570A6259FF7620082A70D /* ContentView.swift in Sources */,
+				4F1570B8259FF7B20082A70D /* Conductor.swift in Sources */,
 				4F1570A4259FF7620082A70D /* AudioKitUITestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F1570B3259FF79F0082A70D /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F1570B4259FF79F0082A70D /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F1570B3259FF79F0082A70D /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F157098259FF7620082A70D /* Project object */;
 }

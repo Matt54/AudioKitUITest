@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import AudioKitUI
 
 struct ContentView: View {
+    @EnvironmentObject var conductor: Conductor
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        FFTView(conductor.micMixer)
+            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(Conductor.shared)
     }
 }
