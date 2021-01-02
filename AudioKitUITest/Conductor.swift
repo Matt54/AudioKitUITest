@@ -10,9 +10,6 @@ import Foundation
 
 class Conductor : ObservableObject{
     
-    /// Single shared data model
-    static let shared = Conductor()
-    
     /// Audio engine instance
     let engine = AudioEngine()
         
