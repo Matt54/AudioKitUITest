@@ -9,11 +9,10 @@ import SwiftUI
 import AudioKitUI
 
 struct ContentView: View {
-    let conductor: Conductor = Conductor()
+    let conductor = Conductor()
     
     var body: some View {
         FFTView(conductor.micMixer)
-            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
