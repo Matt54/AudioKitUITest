@@ -9,7 +9,7 @@ import SwiftUI
 import AudioKitUI
 
 struct ContentView: View {
-    @EnvironmentObject var conductor: Conductor
+    var conductor: Conductor = Conductor()
     
     var body: some View {
         FFTView(conductor.micMixer)
@@ -19,6 +19,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Conductor.shared)
+        ContentView(conductor: Conductor())
     }
 }
